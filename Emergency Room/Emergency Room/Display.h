@@ -22,16 +22,22 @@ public:
         
         string name;
         do {
-            std::cout << "What person do you want to see? If none type 'exit' \n";
-            cin >> name; //'exit' to exit'
+            do{
+                std::cout << "What person do you want to see? If none type 'exit' \n";
+                cin >> name; //'exit' to exit'
+            
+                //checks if name is in map
+                if(r->records.count(name) == 0)
+                    cout << "Person never came to emergency room.\n";
+            }while (r->records.count(name) == 0);
             //Display patient's number of visits
             cout << "Total number of visits for " << name << ": " << r->records[name]->numVisits << endl;
             //severity of each visit
             cout << name << "'s severity for each visit: /n";
-            for (int i = 0; i < r->records[name]->pastPriority.size(); i++) {
-                cout << i << "/t";
-                cout << r->records[name]->pastPriority[i] << endl;
-            }
+//            for (int i = 0; i < r->records[name]->pastPriority.size(); i++) {
+//                cout << i << "/t";
+//                cout << r->records[name]->pastPriority[i] << endl;
+//            }
         } while(name != "exit");
     }
 

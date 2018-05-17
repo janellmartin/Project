@@ -17,7 +17,7 @@ private:
     int numTreated;
     int totalwait;
     int patientNumber; //if it gets to the end, start at the begining -> mod2000
-    CreatePatients *patientList;
+    //CreatePatients *patientList;
 public:
     WaitRoom(){
         numTreated = 0;
@@ -27,15 +27,10 @@ public:
     
     void setArrivalRate(double rate){
         arrivalRate = rate;
+        if (rate < 0)
+            throw ("Error, not in range");
     }
     
-    int getNumTreated(){
-        return numTreated;
-    }
-    
-    int getTotalWait(){
-        return totalwait;
-    }
     
     // add a new patient into the waiting room based on the arrivalRate
     //check map if patient is already made
@@ -44,7 +39,9 @@ public:
         if(Randomrate <= arrivalRate){
             //access previously made patients
             //change arrival time
-            Patient *p = patientList->people[patientNumber]; //getting patient object ??
+            //Patient *p = patientList->people.find(patientNumber)->second; //getting patient object ??
+            Patient *p = new Patient(clock);
+            //p->arrival_time = clock; //setting its arrival time
             (patientNumber++) % 2000; //move along the line as you create new patients
             
             //put patients into priority queue based on their random priority value

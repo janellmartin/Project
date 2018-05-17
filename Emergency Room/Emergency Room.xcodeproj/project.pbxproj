@@ -32,6 +32,7 @@
 		4FBA452520ACAD99008AF8F5 /* Display.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Display.h; sourceTree = "<group>"; };
 		4FBA452620ACBC61008AF8F5 /* CreatePatients.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreatePatients.h; sourceTree = "<group>"; };
 		4FCE2B1720AA263300A8AF02 /* Records.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Records.h; sourceTree = "<group>"; };
+		4FD4797520ADDADB0098DB0F /* UnitTesting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnitTesting.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +73,7 @@
 				4F68653620978AAC0043D62B /* Caregivers.h */,
 				4FBA452520ACAD99008AF8F5 /* Display.h */,
 				4FBA452620ACBC61008AF8F5 /* CreatePatients.h */,
+				4FD4797520ADDADB0098DB0F /* UnitTesting.h */,
 			);
 			path = "Emergency Room";
 			sourceTree = "<group>";

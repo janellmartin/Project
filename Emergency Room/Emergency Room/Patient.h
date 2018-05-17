@@ -21,15 +21,16 @@ struct Patient
     int treatment_time;
     int discharge_time;
     int numVisits;
-    std::vector<int> pastPriority;
-    Patient(std::string name){
-        name = name;
+    //std::vector<int> pastPriority;
+    Patient(int clock){
+        this->name = "Janell";
         priority = prioritySet();
+        arrival_time = clock;
         treatment_time = -1;
         discharge_time = -1;
         treatment_start = -1;
         numVisits = 1;
-        pastPriority[0] = priority;
+       //pastPriority[0] = this->priority;
     }
     
     //setting priority to 1-10 70%, 11-15 20%, and 16-20 10% of the time

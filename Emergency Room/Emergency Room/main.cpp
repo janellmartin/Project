@@ -5,15 +5,16 @@
 #include "Records.h"
 #include "Display.h"
 #include "CreatePatients.h"
+#include "UnitTesting.h"
 
 using namespace std;
 #include <iostream>
 int main(){
     int hourlyRate, numDoc, numNurse;
     cout << "Welcome to your personalized emergency room! \n";
-    cout << "How many patients arrive per hour: ";
+    cout << "How many patients arrive per hour (no more than 60): ";
     cin >> hourlyRate;
-    int rate = hourlyRate/60;
+    double rate = hourlyRate/60;
     cout << "Number of doctors: ";
     cin >> numDoc;
     cout << "Number of nurses: ";
