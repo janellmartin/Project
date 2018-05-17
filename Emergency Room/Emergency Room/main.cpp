@@ -10,8 +10,8 @@ using namespace std;
 #include <iostream>
 int main(){
     int hourlyRate, numDoc, numNurse;
-    cout << "Welcome your personaliZed emergency room! \n";
-    cout << "How many patients per hour: ";
+    cout << "Welcome to your personalized emergency room! \n";
+    cout << "How many patients arrive per hour: ";
     cin >> hourlyRate;
     int rate = hourlyRate/60;
     cout << "Number of doctors: ";
